@@ -16,6 +16,13 @@
 
 <body>
 
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-arrow-down">
+      <path stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
+      <!-- <path d="m1 1 4 4 4-4" /> -->
+    </symbol>
+  </svg>
+
   <header>
     <nav class="navigation">
 
@@ -23,24 +30,43 @@
         <a class="logo" href="#"><img src="./images/logo.svg" alt="snap logo"></a>
 
         <ul class="menu-left">
-          <li class="dropdown">
-            <button class="dropdown-button" href="#">Features</button>
-            <div class="dropdown-content">
-              <a href="#">Todo List</a>
-              <a href="#">Calendar</a>
-              <a href="#">Reminders</a>
-              <a href="#">Planning</a>
-            </div>
+          <li>
+            <a href="http://example.com/" aria-haspopup="true">Features
+              <svg width="10" height="10">
+                <use href="#icon-arrow-down"></use>
+              </svg>
+            </a>
+
+            <ul class="dropdown" aria-label="submenu">
+              <li><a href="http://example.com/"><img src="images/icon-todo.svg" alt="to-do icon">Todo List</a></li>
+              <li><a href="http://example.com/"><img src="images/icon-calendar.svg" alt="calendar icon">Calendar</a>
+              </li>
+              <li><a href="http://example.com/"><img src="images/icon-reminders.svg" alt="reminders icon">Reminders</a>
+              </li>
+              <li><a href="http://example.com/"><img src="images/icon-planning.svg" alt="planning icon">Planning</a>
+              </li>
+            </ul>
           </li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="http://example.com/" aria-haspopup="true">Company
+              <svg width="10" height="10">
+                <use href="#icon-arrow-down"></use>
+              </svg>
+            </a>
+
+            <ul class="dropdown align-left" aria-label="submenu">
+              <li><a href="http://example.com/">History</a></li>
+              <li><a href="http://example.com/">Our Team</a></li>
+              <li><a href="http://example.com/">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="http://example.com/">Careers</a></li>
+          <li><a href="http://example.com/">About</a></li>
         </ul>
       </div>
 
       <div>
         <ul class="menu-right">
-          <li><a href="#">Login</a></li>
+          <li><a href="http://example.com/">Login</a></li>
           <li class="register-cta"><a href="#">Register</a></li>
         </ul>
       </div>
@@ -67,8 +93,8 @@
 
     <div class="right-column">
       <picture>
-        <source media="(max-width: 680px)" srcset="./images/image-hero-mobile.png">
-        <source media="(min-width: 681px)" srcset="./images/image-hero-desktop.png">
+        <source media="(max-width: 375px)" srcset="./images/image-hero-mobile.png">
+        <source media="(min-width: 376px)" srcset="./images/image-hero-desktop.png">
         <img src="./images/image-hero-desktop.png" alt="hero image">
       </picture>
     </div>
