@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon-32x32.png" type="image/png">
-  <script src="./script/main.js" defer></script>
 </head>
 
 <body>
@@ -19,70 +18,83 @@
   <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-arrow-down">
       <path stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
-      <!-- <path d="m1 1 4 4 4-4" /> -->
     </symbol>
   </svg>
 
-  <header>
-    <nav class="navigation">
+  <header class="navbar">
 
-      <div class="left">
-        <a class="logo" href="#"><img src="./images/logo.svg" alt="snap logo"></a>
+    <a class="logo" href="#"><img src="./images/logo.svg" alt="snap logo"></a>
 
-        <ul class="menu-left">
-          <li>
-            <a href="http://example.com/" aria-haspopup="true">Features
-              <svg width="10" height="10">
-                <use href="#icon-arrow-down"></use>
-              </svg>
-            </a>
+    <!-- Hamburger menu for mobile -->
+    <img class="mobile-menu" src="./images/icon-menu.svg" alt="menu icon">
 
-            <ul class="dropdown" aria-label="submenu">
-              <li><a href="http://example.com/"><img src="images/icon-todo.svg" alt="to-do icon">Todo List</a></li>
-              <li><a href="http://example.com/"><img src="images/icon-calendar.svg" alt="calendar icon">Calendar</a>
-              </li>
-              <li><a href="http://example.com/"><img src="images/icon-reminders.svg" alt="reminders icon">Reminders</a>
-              </li>
-              <li><a href="http://example.com/"><img src="images/icon-planning.svg" alt="planning icon">Planning</a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="http://example.com/" aria-haspopup="true">Company
-              <svg width="10" height="10">
-                <use href="#icon-arrow-down"></use>
-              </svg>
-            </a>
+    <div class="mobile-fade-block hidden"></div>
 
-            <ul class="dropdown align-left" aria-label="submenu">
-              <li><a href="http://example.com/">History</a></li>
-              <li><a href="http://example.com/">Our Team</a></li>
-              <li><a href="http://example.com/">Blog</a></li>
-            </ul>
-          </li>
-          <li><a href="http://example.com/">Careers</a></li>
-          <li><a href="http://example.com/">About</a></li>
-        </ul>
-      </div>
+    <!-- Hidden for mobile by default -->
+    <div class="menu hidden">
+      <img class="mobile-menu-close" src="./images/icon-close-menu.svg" alt="menu icon">
 
-      <div>
-        <ul class="menu-right">
-          <li><a href="http://example.com/">Login</a></li>
-          <li class="register-cta"><a href="#">Register</a></li>
-        </ul>
-      </div>
-    </nav>
+      <ul class="menu-left">
+        <li class="menu-dropdown">
+          <a href="#" aria-haspopup="true">Features
+            <svg width="10" height="10">
+              <use href="#icon-arrow-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown align-right hidden" aria-label="submenu">
+            <li>
+              <a href="#"><img src="images/icon-todo.svg" alt="to-do icon">Todo List</a>
+            </li>
+            <li>
+              <a href="#"><img src="images/icon-calendar.svg" alt="calendar icon">Calendar
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="images/icon-reminders.svg" alt="reminders icon">Reminders</a>
+            </li>
+            <li>
+              <a href="#"><img src="images/icon-planning.svg" alt="planning icon">Planning</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-dropdown">
+          <a href="#" aria-haspopup="true">Company
+            <svg width="10" height="10">
+              <use href="#icon-arrow-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown align-left hidden" aria-label="submenu">
+            <li>
+              <a href="#">History</a>
+            </li>
+            <li>
+              <a href="#">Our Team</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <ul class="menu-right">
+        <li><a href="#">Login</a></li>
+        <li class="register-cta"><a href="#">Register</a></li>
+      </ul>
+
+    </div>
+
   </header>
 
   <div class="container">
 
     <div class="left-column">
       <h1>Make remote work</h1>
-
       <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
         productivity soar.</p>
-
       <a class="learn-more-cta" href="#">Learn more</a>
-
       <div class="clients">
         <img src="./images/client-databiz.svg" alt="databiz client logo">
         <img src="./images/client-audiophile.svg" alt="audiophile client logo">
@@ -93,13 +105,15 @@
 
     <div class="right-column">
       <picture>
-        <source media="(max-width: 375px)" srcset="./images/image-hero-mobile.png">
-        <source media="(min-width: 376px)" srcset="./images/image-hero-desktop.png">
+        <source media="(max-width: 699px)" srcset="./images/image-hero-mobile.png">
+        <source media="(min-width: 700px)" srcset="./images/image-hero-desktop.png">
         <img src="./images/image-hero-desktop.png" alt="hero image">
       </picture>
     </div>
+
   </div>
 
+  <script src="script/main.js"></script>
 </body>
 
 </html>
