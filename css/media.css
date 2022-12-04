@@ -40,9 +40,6 @@
   }
 
   /* DROPDOWN */
-  .nav-list li a {
-    padding-bottom: 0;
-  }
 
   .dropdown {
     flex-direction: column;
