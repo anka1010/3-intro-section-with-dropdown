@@ -5,9 +5,9 @@ const overlay = document.querySelector('#overlay');
 
 mobileMenuBtn.addEventListener('click', () => {
   if (nav.classList.toggle('open')) {
-    mobileMenuBtnImg.src = '../img/icons/icon-close-menu.svg';
+    mobileMenuBtnImg.src = '/img/icons/icon-close-menu.svg';
   } else {
-    mobileMenuBtnImg.src = '../img/icons/icon-menu.svg';
+    mobileMenuBtnImg.src = '/img/icons/icon-menu.svg';
   }
   overlay.classList.toggle('open');
 });

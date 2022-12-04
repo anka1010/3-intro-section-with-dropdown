@@ -214,6 +214,10 @@ a:active + .dropdown,
   margin-bottom: 4.5rem;
 }
 
+.intro-image img {
+  height: 100%;
+  display: block;
+}
 /* LEARN MORE BUTTON */
 
 .learn-more-cta,

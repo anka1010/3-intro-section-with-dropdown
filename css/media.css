@@ -105,7 +105,6 @@
   /* INTRO */
   .intro {
     padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 
   .intro-row {
@@ -131,6 +130,7 @@
 
   .intro {
     padding-top: 2.3rem;
+    padding-bottom: 3rem;
   }
 
   .container {
