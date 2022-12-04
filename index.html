@@ -6,112 +6,129 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>snap - Intro</title>
-  <link rel="stylesheet" href="./styles/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <link rel="icon" href="./img/favicon-32x32.png" type="image/png">
 </head>
 
 <body>
 
+  <!-- SVG for arrows in dropdown menu -->
   <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-arrow-down">
-      <path stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
+      <path stroke="#none" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4" />
     </symbol>
   </svg>
 
-  <header class="navbar">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
 
-    <a class="logo" href="#"><img src="./images/logo.svg" alt="snap logo"></a>
+      <!-- HEADER navigation -->
+      <div class="header-nav">
+        <!-- LOGO -->
+        <a href="#!"><img src="./img/logo.svg" alt="Logo"></a>
 
-    <!-- Hamburger menu for mobile -->
-    <img class="mobile-menu" src="./images/icon-menu.svg" alt="menu icon">
+        <!-- NAVIGATION -->
+        <nav class="nav" id="nav">
+          <div class="nav-list-group">
 
-    <div class="mobile-fade-block hidden"></div>
+            <!-- PRIMARY MENU -->
+            <ul class="nav-list primary">
+              <li><a href="#!">Features
+                  <svg class="arrow_icon" width="10" height="5">
+                    <use href="#icon-arrow-down"></use>
+                  </svg>
+                </a>
+                <!-- DROPDOWN -->
+                <ul class="dropdown">
+                  <li class="list-item"><a href="#!"><img src="./img/icons/icon-todo.svg" alt="Todo icon">Todo List</a>
+                  </li>
+                  <li class="list-item"><a href="#!"><img src="./img/icons/icon-calendar.svg"
+                        alt="Calendar icon">Calendar</a></li>
+                  <li class="list-item"><a href="#!"><img src="./img/icons/icon-reminders.svg"
+                        alt="Reminders icon">Reminders</a></li>
+                  <li class="list-item"><a href="#!"><img src="./img/icons/icon-planning.svg"
+                        alt="Planning icon">Planning</a></li>
+                </ul>
+              </li>
+              <li><a href="#!">Company
+                  <svg class="arrow_icon" width="10" height="5">
+                    <use href="#icon-arrow-down"></use>
+                  </svg>
+                </a>
+                <!-- DROPDOWN -->
+                <ul class="dropdown align-left">
+                  <li class="list-item"><a href="#!">History</a></li>
+                  <li class="list-item"><a href="#!">Our Team</a></li>
+                  <li class="list-item"><a href="#!">Blog</a></li>
+                </ul>
+              </li>
+              <li><a href="#!">Careers</a></li>
+              <li><a href="#!">About</a></li>
+            </ul>
 
-    <!-- Hidden for mobile by default -->
-    <div class="menu hidden">
-      <img class="mobile-menu-close" src="./images/icon-close-menu.svg" alt="menu icon">
+            <!-- SECONDARY MENU -->
+            <ul class="nav-list secondary">
+              <li><a href="#!">Login</a></li>
+              <li><a href="#!" class="btn">Register</a></li>
+            </ul>
+          </div>
 
-      <ul class="menu-left">
-        <li class="menu-dropdown">
-          <a href="#" aria-haspopup="true">Features
-            <svg width="10" height="10">
-              <use href="#icon-arrow-down"></use>
-            </svg>
-          </a>
-          <ul class="dropdown align-right hidden" aria-label="submenu">
-            <li>
-              <a href="#"><img src="images/icon-todo.svg" alt="to-do icon">Todo List</a>
-            </li>
-            <li>
-              <a href="#"><img src="images/icon-calendar.svg" alt="calendar icon">Calendar
-              </a>
-            </li>
-            <li>
-              <a href="#"><img src="images/icon-reminders.svg" alt="reminders icon">Reminders</a>
-            </li>
-            <li>
-              <a href="#"><img src="images/icon-planning.svg" alt="planning icon">Planning</a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-dropdown">
-          <a href="#" aria-haspopup="true">Company
-            <svg width="10" height="10">
-              <use href="#icon-arrow-down"></use>
-            </svg>
-          </a>
-          <ul class="dropdown align-left hidden" aria-label="submenu">
-            <li>
-              <a href="#">History</a>
-            </li>
-            <li>
-              <a href="#">Our Team</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
+          <!-- MOBILE MENU BUTTON (CLOSE / OPEN) -->
+          <button class="nav-mobile-btn" id="mobile-menu-btn">
+            <img src="./img/icons/icon-menu.svg" alt="Open mobile menu button">
+          </button>
 
-      <ul class="menu-right">
-        <li><a href="#">Login</a></li>
-        <li class="register-cta"><a href="#">Register</a></li>
-      </ul>
+          <!-- OVERLAY FOR MOBILE MENU -->
+          <div class="overlay" id="overlay">&nbsp;</div>
+        </nav>
 
-    </div>
-
+      </div>
   </header>
 
-  <div class="container">
+  <!-- INTRO section -->
+  <section class="intro">
+    <div class="container">
 
-    <div class="left-column">
-      <h1>Make remote work</h1>
-      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
-        productivity soar.</p>
-      <a class="learn-more-cta" href="#">Learn more</a>
-      <div class="clients">
-        <img src="./images/client-databiz.svg" alt="databiz client logo">
-        <img src="./images/client-audiophile.svg" alt="audiophile client logo">
-        <img src="./images/client-meet.svg" alt="meet client logo">
-        <img src="./images/client-maker.svg" alt="maker client logo">
+      <div class="intro-row">
+
+        <div class="intro-content">
+          <h1> Make remote work </h1>
+          <p> Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.</p>
+          <a href="#!" class="btn learn-more-cta">Learn more</a>
+
+          <div class="intro-clients">
+            <img src="./img/clients/client-databiz.svg" alt="Databiz logo">
+            <img src="./img/clients/client-audiophile.svg" alt="Audiophile logo">
+            <img src="./img/clients/client-meet.svg" alt="Meet logo">
+            <img src="./img/clients/client-maker.svg" alt="Maker logo">
+          </div>
+        </div>
+
+        <div class="intro-image">
+          <picture>
+            <source media="(max-width: 900px)" srcset="./img/hero/image-hero-mobile.png">
+            <img src="./img/hero/image-hero-desktop.png" alt="Intro image">
+          </picture>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <div class="right-column">
-      <picture>
-        <source media="(max-width: 699px)" srcset="./images/image-hero-mobile.png">
-        <source media="(min-width: 700px)" srcset="./images/image-hero-desktop.png">
-        <img src="./images/image-hero-desktop.png" alt="hero image">
-      </picture>
+  <section class="attribution">
+    <div class="container">
+
+      <p>
+        Design by <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5"
+          target="_blank">Frontend Mentor</a>.
+      </p>
+
     </div>
-
-  </div>
+  </section>
 
   <script src="script/main.js"></script>
 </body>
