@@ -1,268 +1,269 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
 
 :root {
-  --almost-white: hsl(0, 0%, 98%);
-  --medium-gray: hsl(0, 0%, 41%);
-  --almost-black: hsl(0, 0%, 8%);
+   --almost-white: hsl(0, 0%, 98%);
+   --medium-gray: hsl(0, 0%, 41%);
+   --almost-black: hsl(0, 0%, 8%);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+   box-sizing: inherit;
 
-  padding: 0px;
-  margin: 0px;
-  border: none;
+   padding: 0px;
+   margin: 0px;
+   border: none;
 }
 
 html {
-  font-size: 62.5%;
+   font-size: 62.5%;
 }
 
 body {
-  font-family: 'Epilogue', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.1;
+   font-family: 'Epilogue', sans-serif;
+   font-size: 1.6rem;
+   font-weight: 500;
+   line-height: 1.1;
 
-  background-color: var(--almost-white);
-  color: var(--medium-gray);
+   background-color: var(--almost-white);
+   color: var(--medium-gray);
 }
 
 h1 {
-  font-size: 7.5rem;
-  font-weight: 700;
-  color: var(--almost-black);
+   font-size: 7.5rem;
+   font-weight: 700;
+   color: var(--almost-black);
 }
 
 p {
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.5;
+   font-size: 1.8rem;
+   font-weight: 500;
+   line-height: 1.5;
 }
 
 a {
-  line-height: 1;
-  color: var(--medium-gray);
-  transition: all 0.2s ease-in;
+   line-height: 1;
+   color: var(--medium-gray);
+   transition: all 0.2s ease-in;
 }
 
 a:hover,
 a:focus {
-  color: var(--almost-black);
+   color: var(--almost-black);
 }
 
 ul li {
-  line-height: 1;
-  padding-top: 0.4rem;
+   line-height: 1;
+   padding-top: 0.4rem;
 }
 
 /* BUTTON */
 
 .btn {
-  border: 2px solid;
-  border-radius: 1.3rem;
-  padding: 0.9em 1.7em;
-  max-width: fit-content;
-  border-color: inherit;
+   border: 2px solid;
+   border-radius: 1.3rem;
+   padding: 0.9em 1.7em;
+   max-width: fit-content;
+   border-color: inherit;
 
-  transition: all 0.2s ease-in;
+   transition: all 0.2s ease-in;
 }
 
 .btn:active {
-  position: relative;
-  top: 1px;
+   position: relative;
+   top: 1px;
 }
 
 .overlay {
-  display: none;
+   display: none;
 }
 
 /* CONTAINER */
 
 .container {
-  max-width: 1440px;
-  padding: 0 40px;
-  margin: 0 auto;
+   max-width: 1440px;
+   padding: 0 40px;
+   margin: 0 auto;
 }
 
 /* HEADER */
 
 .header {
-  padding-top: 3rem;
+   padding-top: 3rem;
 }
 
 .header-nav {
-  line-height: 4.2rem;
-  display: flex;
-  column-gap: 6rem;
+   line-height: 4.2rem;
+   display: flex;
+   column-gap: 6rem;
 }
 
 .nav {
-  display: flex;
-  flex-grow: 1;
+   display: flex;
+   flex-grow: 1;
 }
 
 .nav-list-group {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
+   display: flex;
+   justify-content: space-between;
+   flex-grow: 1;
 }
 
 .nav-list {
-  display: flex;
-  column-gap: 4rem;
+   display: flex;
+   column-gap: 4rem;
 }
 
 /* DROPDOWN */
 
 .nav-list li {
-  position: relative;
+   position: relative;
 }
 
 .nav-list li a {
-  padding-bottom: 1rem;
+   padding-bottom: 1rem;
 }
 
 .arrow_icon {
-  margin-left: 2px;
-  margin-bottom: 2px;
-  stroke: var(--medium-gray);
+   margin-left: 2px;
+   margin-bottom: 2px;
+   stroke: var(--medium-gray);
 }
 
 a:hover .arrow_icon,
 a:focus .arrow_icon,
 a:active .arrow_icon {
-  stroke: var(--almost-black);
-  transform: rotate(180deg);
+   stroke: var(--almost-black);
+   transform: rotate(180deg);
 }
 
 .dropdown {
-  display: none;
+   display: none;
 
-  position: absolute;
-  right: 0;
-  top: 3rem;
-  z-index: 10;
+   position: absolute;
+   right: 0;
+   top: 3rem;
+   z-index: 10;
 
-  width: max-content;
+   width: max-content;
 
-  background-color: #fff;
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 2rem;
+   background-color: #fff;
+   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 2rem;
 }
 
 .dropdown.align-left {
-  left: 0;
+   left: 0;
 }
 
 a:hover + .dropdown,
 a:focus + .dropdown,
 a:active + .dropdown,
 .dropdown:hover {
-  display: block;
+   display: block;
 }
 
 .dropdown li {
-  white-space: nowrap;
-  padding-bottom: 1.2rem;
+   white-space: nowrap;
+   padding-bottom: 1.2rem;
 }
 
 .dropdown li:last-child {
-  padding-bottom: 0;
+   padding-bottom: 0;
 }
 
 .dropdown li img {
-  margin-right: 1.4rem;
+   margin-right: 1.4rem;
 }
 
 /* -- DROPDOWN -- */
 
 .nav-mobile-btn {
-  display: none;
+   display: none;
 }
 
 /* INTRO */
 
 .intro {
-  padding-top: 6rem;
+   padding-top: 6rem;
 }
 
 .intro-row {
-  display: flex;
-  column-gap: 15rem;
-  max-height: 65rem;
-  max-width: 114rem;
-  margin: 0 auto;
+   display: flex;
+   column-gap: 15rem;
+   max-height: 65rem;
+   max-width: 114rem;
+   margin: 0 auto;
 }
 
 .intro-content {
-  display: flex;
-  flex-flow: column;
-  margin-top: 10rem;
-  margin-left: 3rem;
+   display: flex;
+   flex-flow: column;
+   margin-top: 10rem;
+   margin-left: 3rem;
 }
 
 .intro-content h1 {
-  margin-bottom: 4.5rem;
+   margin-bottom: 4.5rem;
 }
 
 .intro-content p {
-  line-height: 1.7;
-  margin-bottom: 4.5rem;
+   line-height: 1.7;
+   margin-bottom: 4.5rem;
 }
 
 .intro-image img {
-  height: 100%;
-  display: block;
-  margin: 0 auto;
+   height: 100%;
+   object-fit: contain;
+   display: block;
+   margin: 0 auto;
 }
 /* LEARN MORE BUTTON */
 
 .learn-more-cta,
 .learn-more-cta:visited {
-  font-weight: 700;
-  color: var(--almost-white);
-  background-color: var(--almost-black);
+   font-weight: 700;
+   color: var(--almost-white);
+   background-color: var(--almost-black);
 }
 
 .learn-more-cta:hover,
 .learn-more-cta:focus,
 .learn-more-cta:active {
-  color: var(--almost-black);
-  background-color: var(--almost-white);
+   color: var(--almost-black);
+   background-color: var(--almost-white);
 }
 /* -- LEARN MORE BUTTON --*/
 
 .intro-clients {
-  display: flex;
-  justify-content: space-between;
-  margin-top: auto;
+   display: flex;
+   justify-content: space-between;
+   margin-top: auto;
 }
 
 .intro-clients :last-child {
-  margin-right: 4rem;
+   margin-right: 4rem;
 }
 
 .intro-clients img {
-  object-fit: contain;
+   object-fit: contain;
 }
 
 /* ATTRIBUTION */
 
 .attribution {
-  padding-top: 4rem;
+   padding-top: 4rem;
 
-  color: var(--medium-gray);
-  text-align: center;
+   color: var(--medium-gray);
+   text-align: center;
 }
 
 .attribution p {
-  font-size: 1.2rem;
+   font-size: 1.2rem;
 }
 .attribution a {
-  color: var(--almost-black);
-  font-weight: 700;
+   color: var(--almost-black);
+   font-weight: 700;
 }
