@@ -217,6 +217,7 @@ a:active + .dropdown,
 .intro-image img {
   height: 100%;
   display: block;
+  margin: 0 auto;
 }
 /* LEARN MORE BUTTON */
 

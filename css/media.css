@@ -103,27 +103,37 @@
   }
 
   /* INTRO */
-  .intro {
-    padding-top: 3rem;
-  }
 
   .intro-row {
+    max-height: 60rem;
     column-gap: 3rem;
   }
 
   .intro-content {
+    justify-content: space-between;
     margin-top: 8rem;
-    margin-left: 0;
+    margin-left: 1rem;
+  }
+
+  .intro-content h1,
+  p,
+  a,
+  div {
+    margin-bottom: 0;
   }
 
   .intro-content h1 {
     font-size: 6rem;
   }
+
+  .intro-clients {
+    margin-top: 0;
+  }
 }
 
 /* MOBILE */
 
-@media (max-width: 900px) {
+@media (max-width: 912px) {
   .header {
     padding-inline: 1.6rem;
   }
